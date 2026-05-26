@@ -23,6 +23,9 @@ public class MidtermPractice {
 
         float[] arr = {1.5f, 3.0f, 3.5f, 2.0f};
         System.out.println(findAverage(arr));
+
+        int[] nums = {3, 6, 9};
+        System.out.println(allDivisibleBy3(nums));
         // After implementing a method, call it here with
         // some sample input and print the result to
         // check if it works. Fix any issues you find.
@@ -98,7 +101,12 @@ public class MidtermPractice {
      * Example 2: input: [3, 4, 6, 9] -> output: false
      */
     public static boolean allDivisibleBy3(int[] arr) {
-        return false;
+        for(int num : arr){
+            if(num % 3 != 0){
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
