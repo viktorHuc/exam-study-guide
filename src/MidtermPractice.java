@@ -19,6 +19,9 @@ public class MidtermPractice {
         map.put("world",15);
         map.put("amazing",17);
         System.out.println(countLongWords(map));
+
+        float[] arr = {1.5f, 3.0f, 3.5f, 2.0f};
+        System.out.println(findAverage(arr));
         // After implementing a method, call it here with
         // some sample input and print the result to
         // check if it works. Fix any issues you find.
@@ -63,7 +66,11 @@ public class MidtermPractice {
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
     public static double findAverage(float[] arr) {
-        return -1.0;
+        float total = 0;
+        for (float num : arr){
+            total += num;
+        }
+        return total/arr.length;
     }
 
     /**
