@@ -8,9 +8,10 @@ public class MidtermPractice {
     public static void main(String[] args) {
         List<String> check = new ArrayList<>();
         check.add("apple");
-        check.add("banana");
-        check.add("kiwi");
+        check.add("a banana");
+        check.add("a kiwi");
         System.out.println(findLongestWord(check));
+        System.out.println(allStartWithA(check));
 
         Map<String, Integer> map = new HashMap<>();
         map.put("why", 7);
@@ -117,7 +118,12 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
     public static boolean allStartWithA(List<String> list) {
-        return false;
+        for(String word : list){
+            if(word.charAt(0)!= 'a'){
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
